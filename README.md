@@ -41,6 +41,7 @@ omp models ghostcli
 | `claude-sonnet-5` | 256k | Balanced daily driver, `pro` plan |
 | `claude-fable-5.1` | 256k | Fast/cheap, `max` plan |
 | `z-ai/glm-5.3` | 1M | Long-context work, `pro` plan |
+| `gpt-6-astra` | 1M | Long-context reasoning |
 
 The router also lists a `z-ai/glm-5.3[1m]` display variant; it shares the
 `z-ai/glm-5.3` request string, so the plugin dedupes it to one entry.

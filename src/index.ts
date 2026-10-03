@@ -190,6 +190,15 @@ export default function ghostcliProvider(pi: ExtensionAPI): void {
 				contextWindow: 1000000,
 				maxTokens: 16000,
 			},
+			{
+				id: "gpt-6-astra",
+				name: "GPT 6 Astra",
+				reasoning: true,
+				input: ["text", "image"],
+				cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
+				contextWindow: 1000000,
+				maxTokens: 16000,
+			},
 		],
 		async fetchDynamicModels(apiKey) {
 			const entries = await fetchGhostModels(apiKey);
