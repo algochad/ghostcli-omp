@@ -1,0 +1,44 @@
+{
+  "name": "ghostcli-omp",
+  "version": "0.1.0",
+  "description": "GhostCLI provider extension for omp — /login, live model discovery, multi-key rotation. Install: omp plugin install github:algochad/ghostcli-omp",
+  "type": "module",
+  "license": "MIT",
+  "author": "Jhon Burn Villamor",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/algochad/ghostcli-omp.git"
+  },
+  "keywords": [
+    "omp",
+    "oh-my-pi",
+    "extension",
+    "provider",
+    "ghostcli"
+  ],
+  "homepage": "https://github.com/algochad/ghostcli-omp#readme",
+  "bugs": {
+    "url": "https://github.com/algochad/ghostcli-omp/issues"
+  },
+  "files": [
+    "src/**/*.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "omp": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@oh-my-pi/pi-coding-agent": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@oh-my-pi/pi-coding-agent": "^18.3.0",
+    "typescript": "^5.6.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test:load": "omp models -e ./src/index.ts ghostcli"
+  }
+}
